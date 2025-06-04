@@ -7,6 +7,32 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Optional: smoother animation feel */
+        .scrolling-wrapper {
+          display: flex;
+          gap: 2rem;
+          white-space: 3;
+          overflow: hidden;
+          width: 100%;
+        }
+    
+        .scrolling-content {
+          display: flex;
+          gap: 2rem;
+          animation: scroll-left 20s linear infinite;
+        }
+    
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      </style>
 </head>
 <body>
     
@@ -47,10 +73,10 @@
             <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-7xl font-bold md:hidden">MIAMI</span>
             <P class="absolute left-1/2 -translate-x-1/2 text-black text-7xl font-bold md:hidden"></P>
         </div>
-        <div class=" md:text-center md:text-left md:p-10 w-full md:w-1/2 relative">
+        <div class=" md:text-center md:text-left md:p-10 w-full md:w-1/2 relative sm:text-center">
             <div class="relative inset-x- bottom-25 h-">
                 <span class="hidden md:inline md:text-7xl font-bold bg-gradient-to-r from-[#3C33EF] to-[#F43366] text-transparent bg-clip-text lg:text-8xl xl:text-[9rem] relative top-26">MIAMI</span>
-                <span class=" md:p-0 text-7xl font-bold md:font-extrabold relative md:text-8xl lg:text-9xl xl:text-[10rem] sm:relative top-25 ">
+                <span class=" md:p-0 text-7xl font-bold md:font-extrabold relative md:text-8xl lg:text-9xl xl:text-[10rem] sm:relative top-25">
                     WALKE
                     <span class="inline-block absolute md:text-white md:top-3 md:left-[19.2rem] md:px-4 lg:top-5 lg:left-[26.5rem] xl:top-6 xl:left-[34.5rem]">R</span>
                 </span>
@@ -76,25 +102,45 @@
 
 </main>
 
-<section class="py-12 bg-white relative top-40">
+<section class="py-12 relative top-40 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">
         Trusted By
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
-        
-        <img src="images/paperz.jpg" alt="Paperz Logo" class=" w-full grayscale hover:grayscale-0 transition duration-300" />
-        
-        <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="w-full mx-auto grayscale hover:grayscale-0 transition duration-300" />
-        
-        <img src="images/Martino.jpg" alt="Martino Logo" class="w-full mx-auto grayscale hover:grayscale-0 transition duration-300" />
-        
-        <img src="images/Square.jpg" alt="Square Logo" class="w-full mx-auto grayscale hover:grayscale-0 transition duration-300" />
-        
-        <img src="images/Gabona.jpg" alt="Gobona Logo" class="w-full mx-auto grayscale hover:grayscale-0 transition duration-300" />
+
+      <div class="scrolling-wrapper">
+        <div id="logoScroller" class="scrolling-content">
+          <!-- Repeat logos twice for seamless scroll -->
+          <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+
+            <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+          </div>
+
+          <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+          </div>
+          </div>
+          
+        </div>
       </div>
     </div>
   </section>
+  
+  
 
   
   
@@ -274,7 +320,7 @@
 </section>
 
 
-<section class="bg-black w-full min-h-screen mt-200">
+<section class="bg-black bg-cover bg-center w-full min-h-screen mt-200">
     <div class="max-w-6xl mx-auto py-36 px-12">
         <h2 class="text-pink-400 text-sm font-bold uppercase">Latest Blog</h2>
         <h1 class="text-3xl md:text-4xl font-bold mt-2 text-white">Check Some of Latest<br> News & Articles</h1>
@@ -355,20 +401,19 @@
 
 
 
-<section class="py-8 bg-gray-50 mt-20">
-    <div class="max-w-7xl mx-auto px-4 id="slider
-    class="flex transition-transform duration-500 ease-in-out"
-    style="width: 300%;">
+<section class="py-8 bg-white mt-20">
+    <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-26">
             <h3 class="text-pink-500">TESTIMONIALS</h3>
       <h2 class="text-2xl md:text-3xl font-bold mb-8">What Our Customers Say</h2>
       </div>
-      <!-- Container using Tailwind’s grid classes -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+       <div class="scrolling-wrapper">
+      <div id="logoScroller" class="grid grid-cols-2 md:grid-cols-3 gap-8  scrolling-content">
         <!-- Testimonial 1 -->
-        <div class="bg-white p-6 rounded shadow">
+        <div class="bg-white p-4 ">
           <blockquote class="text-gray-700 italic mb-4">
-            "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            "Now, I can track my business activity with easier and have a great understandable to operate the products."
           </blockquote>
           <div class="flex items-center">
             <img 
@@ -384,7 +429,7 @@
         </div>
         
         <!-- Testimonial 2 -->
-        <div class="bg-white p-6 rounded shadow">
+        <div class="bg-white p-6 rounded ">
           <blockquote class="text-gray-700 italic mb-4">
             "Now, I can track my business activity with easier and have a great understandable to operate the products"
           </blockquote>
@@ -402,7 +447,7 @@
         </div>
         
         <!-- Testimonial 3 -->
-        <div class="bg-white p-6 rounded shadow">
+        <div class="bg-white p-6 rounded ">
           <blockquote class="text-gray-700 italic mb-4">
             "Now, I can track my business activity with easier and have a great understandable to operate the products"
           </blockquote>
@@ -420,6 +465,62 @@
             </div>
           </div>
         </div>
+
+
+        <div class="bg-white p-6 rounded ">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center">
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1 (2).png" 
+                alt="User photo"
+              />
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Berry Gunawan</p>
+                <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded ">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center">
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1.png" 
+                alt="User photo"
+              />
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Janne Cooper</p>
+                <div><p class="text-yellow-500 text-lg">★4.5</p></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center justify-between">
+              
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1 (1).png" 
+                alt="User photo"
+              />
+              
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Cobocannaeru</p>
+                <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+              </div>
+            </div>
+      </div>
       </div>
     </div>
     
@@ -433,16 +534,40 @@
         <div class="md:w-1/2 order-2 md:order-1">
             <div class="space-y-4">
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">How can we help your business?</button>
+                  
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">How can we help your business?</option>
+                      <option value="">Promotion</option>
+                      <option value="">Advertisement</option>
+                      <option value="">Business Advice</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">What are the advantages of Bisnext</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">What are the advantages of Bisnext</option>
+                      <option value="">Zero Investment Entry</option>
+                      <option value="">Comprehensive Service Portfolio</option>
+                      <option value="">High Earning Potential</option>
+                      <option value="">User-Friendly Platform</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">Let’s find an office near you?</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                        <option value="">Let’s find an office near you?</option>
+                        <option value="">Abuakwa - Kumasi</option>
+                        <option value="">Tafo - Kumasi</option>
+                        <option value="">Achimota - Accra</option>
+                        <option value="">Goaso - Ahafo</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4 ">
-                    <button class="w-full text-left font-medium">How IT consultancy experts work?</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">How IT consultancy experts work?</option>
+                      <option value="">Understanding the Client's Needs</option>
+                      <option value="">Analyzing and Diagnosing Problems</option>
+                      <option value=""> Creating a Strategy or Solution</option>
+                      <option value=""> Implementation Support</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -459,8 +584,8 @@
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-2">Let’s Make Something <br> Great Together!</h1>
     
     <div class="mt-15">
-        <a href="#" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold lg:px-26 py-40 sm:px-26 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
-            Contact With Us →
+        <a href="#" class="w-50 h-50 inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold text-center lg: sm:px-26 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
+            Contact With Us
         </a>
     </div>
     
