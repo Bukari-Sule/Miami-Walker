@@ -42,8 +42,8 @@
         <div class="">
             <img src="\images\Xest Folio.png" alt="logo" class="w-20">
         </div>
-        <div class="hidden md:flex justify-between items-center gap-5">
-            <div class="flex gap-5 text-xl font-semibold">
+        <div id="mobile-menu" class="hidden md:flex justify-between items-center gap-5">
+            <div id="nav-links" class="flex flex-col gap-5 text-small mt-4 bg-pink-500 rounded-md br-5 font-semibold md:flex-row text-lg mt-0 md:bg-white">
                 <a href="#">About</a>
                 <a href="#">Services</a>
                 <a href="#">Blog</a>
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="flex md:hidden">
-            <img src="images/material-symbols_menu-rounded.png" alt="">
+            <img id="hamburger" src="images/material-symbols_menu-rounded.png" alt="">
         </div>
     </nav> 
 </header>
@@ -165,8 +165,6 @@
                 Contact Us
             </button>
         </div>
-
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class=" rounded-lg p-4 relative top-30">
                 <img src="images/image.png" alt="UX Experience" class="rounded-md mb-3">
@@ -180,7 +178,7 @@
                 <p class="text-gray-600 text-sm">I design products that are more than pretty. I make them usable.</p>
             </div>
 
-            <div class=" rounded-lg p-4 relative top-30">
+            <div class=" rounded-lg p-4 relative top-20 md:top-30">
                 <img src="images/image (2).png" alt="Product Analysis" class="rounded-md mb-3">
                 <h3 class="text-lg font-semibold text-gray-900">Product Analysis</h3>
                 <p class="text-gray-600 text-sm">I design products that are more than pretty. I make them usable.</p>
@@ -195,7 +193,7 @@
     </div>
 
     
-      <section class="bg-white py-12 relative top-120">
+      <section class="bg-white py-12 relative top-120 hidden md:block">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       
@@ -262,8 +260,8 @@
 
 
 <section class="lg:px-26 md:px-10">
-    <div class="max-w-6xl mx-auto relative inset-x- top-140 h-">  
-                   <div class="mb-3 flex justify-between items-center px-10 md:px-26 py-10 lg:px-1 font-Jakarta">
+    <div class="max-w-6xl mx-auto relative inset-x- top-90 h- md:top-140">  
+                   <div class="mb-3 flex flex-col justify-between px-1 md:flex-row px-2 py-10 lg:px-1 font-Jakarta">
                           <div class="">
                                    <p class="text-sm text-purple-600 font-semibold">PORTFOLIO</p>
                                    <h2 class="text-3xl font-bold">Some Of Our Best Works</h2>
@@ -280,7 +278,7 @@
                    </div>
         
 
-        <div class="grid grid-cols-4 gap-5">
+        <div class=" grid grid-cols-1 gap-5 md:grid-cols-4 ">
                   <div class="relative col-span-2">
                           <img src="images/Rectangle 38.png" class="w-full h-50 object-cover">
                                 <div class="absolute bottom-4 left-4 text-white">
@@ -288,28 +286,28 @@
                                      <h3 class="text-lg font-bold">Greenfy Website</h3>
                                </div>
                  </div>
-                                  <div class="col-span-1">
+                                  <div class="col-span-2 md:col-span-1">
                                           <img src="images/Rectangle 39.png" class=" w-full h-50 object-cover">
                                   </div>
-                                  <div class="col-span-1">
+                                  <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 43.png" class="w-full h-50 object-cover">
                                   </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-2 md:col-span-1">
                                           <img src="images/Rectangle 61.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 60.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-2">
+                                   <div class="col-span-2 hidden md:block">
                                           <img src="images/Rectangle 59.png" class="w-full h-50 object-cover">
                                   </div>
-                                   <div class="col-span-2">
+                                   <div class="col-span-2 hidden md:block">
                                           <img src="images/Rectangle 38.png" class="w-full h-50 object-cover">
                                    </div>
-                                    <div class="col-span-1">
+                                    <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 39.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 43.png" class="w-full h-50 object-cover">
                                    </div>
                 
@@ -320,18 +318,21 @@
 </section>
 
 
-<section class="bg-black bg-cover bg-center w-full min-h-screen mt-200">
-    <div class="max-w-6xl mx-auto py-36 px-12">
+<section class="bottom-80 bg-black bg-cover bg-center w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-full min-h-screen mt-200 pb-26 md:pb-20 bg-black-500 md:bottom-27">
+    <div class="max-w-6xl mx-auto py-36 px-0 md:px-12">
+      <div class="mb-3 flex flex-col justify-between px-1 md:flex-row px-2 py-10 lg:px-1 font-Jakarta">
+        <div>
         <h2 class="text-pink-400 text-sm font-bold uppercase">Latest Blog</h2>
         <h1 class="text-3xl md:text-4xl font-bold mt-2 text-white">Check Some of Latest<br> News & Articles</h1>
-        
-        <div class="mb-10 flex justify-end">
+        </div>
+        <div class="mb-10 flex justify-start mt-10">
             <button class="relative px-6 py-3 text-b text-xl font-bold bg-white
             before:absolute before:top-0 before:left-0 before:-z-10 
             before:w-full before:h-full
             before:bg-gradient-to-r before:from-[#3C33EF] before:to-[#F43366]
             before:transition-all before:duration-300
             hover:before:top-2 hover:before:left-2">Load More</button>
+        </div>
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-30 mb-30">
@@ -385,7 +386,7 @@
                 </div>
             </div>
 
-            <div class="relative ">
+            <div class="relative hidden md:block">
                 <img src="images/image (5).png" alt="Blog Image" class="w-full">
                 <div class="absolute left-12 top-32 xl:top-35 p-2 bg-black">
                 <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
@@ -401,7 +402,7 @@
 
 
 
-<section class="py-8 bg-white mt-20">
+<section class="bg-white -mt-46 md:mt-10">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-26">
             <h3 class="text-pink-500">TESTIMONIALS</h3>
@@ -409,7 +410,7 @@
       </div>
       
        <div class="scrolling-wrapper">
-      <div id="logoScroller" class="grid grid-cols-2 md:grid-cols-3 gap-8  scrolling-content">
+      <div id="logoScroller" class="grid grid-cols-1 md:grid-cols-3 gap-8  scrolling-content">
         <!-- Testimonial 1 -->
         <div class="bg-white p-4 ">
           <blockquote class="text-gray-700 italic mb-4">
@@ -447,7 +448,7 @@
         </div>
         
         <!-- Testimonial 3 -->
-        <div class="bg-white p-6 rounded ">
+        <div class="bg-white p-6 rounded">
           <blockquote class="text-gray-700 italic mb-4">
             "Now, I can track my business activity with easier and have a great understandable to operate the products"
           </blockquote>
@@ -529,7 +530,7 @@
 
 
 
-<section class="bg-black text-white relative top-10">
+<section class="bg-black w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] text-white relative top-10">
     <div class="max-w-5xl mx-auto py-25 px-26 flex flex-col md:flex-row gap-25">
         <div class="md:w-1/2 order-2 md:order-1">
             <div class="space-y-4">
@@ -579,39 +580,61 @@
     </div>
 </section>
 
-<section class="mt-36 flex flex-col items-center justify-center min-h-screen px-6 text-center">
-    <h4 class="text-sm text-pink-500 tracking-wide uppercase">Have you project in mind?</h4>
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-2">Let’s Make Something <br> Great Together!</h1>
-    
-    <div class="mt-15">
-        <a href="#" class="w-50 h-50 inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold text-center lg: sm:px-26 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
-            Contact With Us
-        </a>
-    </div>
-    
-    <div class="mt-25">
-        <img src="images/Xest Folio.png" alt="">
-    </div>
-    
-    <div class="flex flex-row items-center justify-center space-x-28 mt-15 border-b border-gray-400 pb-15 w-full w-screen">
-        <a href="#" class="hover:text-pink-500"><i class="fab fa-facebook-f text-3xl"></i></a>
-        <a href="#" class="hover:text-pink-500"><i class="fab fa-linkedin-in text-3xl"></i></a>
-        <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram text-3xl"></i></a>
-        <a href="#" class="hover:text-pink-500"><i class="fab fa-behance text-3xl"></i></a>
-        <a href="#" class="hover:text-pink-500"><i class="fab fa-dribbble text-3xl"></i></a>
-    </div>
-    
-    <div class="mt-8 text-gray-500 text-sm  top-20 flex justify-between  space-x-170">
-        <div>
-            <p>© 2023 Ideapeel Inc. All Rights Reserved</p>
-        </div>
-        <div>
-            <a href="#" class="hover:underline">Privacy Policy <span>|</span>  <a href="" class="hover:underline">Terms and Conditions</a></a>
-        </div>
+<footer class="bg-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto flex flex-col items-center space-y-6 text-center md:space-y-10">
+
+    <!-- Heading -->
+    <h4 class="text-sm text-pink-500 tracking-wide uppercase">
+      Have you project in mind?
+    </h4>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center">
+      Let’s Make Something <br> Great Together!
+    </h1>
+
+    <!-- Contact Button -->
+    <a href="#" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold px-14 py-14 pb-26 pt-26 rounded-full shadow-lg transition-transform transform hover:scale-105">
+      Contact With Us
+    </a>
+
+    <!-- Logo -->
+    <img src="images/Xest Folio.png" alt="Xest Folio" class="h-10">
+
+  
+    <div class="flex justify-center items-center gap-6 text-2xl">
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-behance"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-dribbble"></i></a>
     </div>
 
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
-</section>
+    <div class="border-b border-gray-300 w-full"></div>
+
+    <div class="flex flex-col items-center space-y-2 text-gray-500 text-sm md:flex-row md:justify-between md:space-y-0 w-full">
+      <p>© 2023 Ideapeel Inc. All Rights Reserved</p>
+      <div class="flex items-center gap-2">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Terms and Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+
+</script>
 
 
 </body>
