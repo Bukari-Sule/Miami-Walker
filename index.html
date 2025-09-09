@@ -7,6 +7,32 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Optional: smoother animation feel */
+        .scrolling-wrapper {
+          display: flex;
+          gap: 2rem;
+          white-space: 3;
+          overflow: hidden;
+          width: 100%;
+        }
+    
+        .scrolling-content {
+          display: flex;
+          gap: 2rem;
+          animation: scroll-left 20s linear infinite;
+        }
+    
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      </style>
 </head>
 <body>
     
@@ -16,8 +42,8 @@
         <div class="">
             <img src="\images\Xest Folio.png" alt="logo" class="w-20">
         </div>
-        <div class="hidden md:flex justify-between items-center gap-5">
-            <div class="flex gap-5 text-xl font-semibold">
+        <div id="mobile-menu" class="hidden md:flex justify-between items-center gap-5">
+            <div id="nav-links" class="flex flex-col gap-5 text-small mt-4 bg-pink-500 rounded-md br-5 font-semibold md:flex-row text-lg mt-0 md:bg-white">
                 <a href="#">About</a>
                 <a href="#">Services</a>
                 <a href="#">Blog</a>
@@ -33,7 +59,7 @@
             </div>
         </div>
         <div class="flex md:hidden">
-            <img src="images/material-symbols_menu-rounded.png" alt="">
+            <img id="hamburger" src="images/material-symbols_menu-rounded.png" alt="">
         </div>
     </nav> 
 </header>
@@ -47,10 +73,10 @@
             <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-7xl font-bold md:hidden">MIAMI</span>
             <P class="absolute left-1/2 -translate-x-1/2 text-black text-7xl font-bold md:hidden"></P>
         </div>
-        <div class=" md:text-center md:text-left md:p-10 w-full md:w-1/2 relative">
+        <div class=" md:text-center md:text-left md:p-10 w-full md:w-1/2 relative sm:text-center">
             <div class="relative inset-x- bottom-25 h-">
                 <span class="hidden md:inline md:text-7xl font-bold bg-gradient-to-r from-[#3C33EF] to-[#F43366] text-transparent bg-clip-text lg:text-8xl xl:text-[9rem] relative top-26">MIAMI</span>
-                <span class=" md:p-0 text-7xl font-bold md:font-extrabold relative md:text-8xl lg:text-9xl xl:text-[10rem] sm:relative top-25 ">
+                <span class=" md:p-0 text-7xl font-bold md:font-extrabold relative md:text-8xl lg:text-9xl xl:text-[10rem] sm:relative top-25">
                     WALKE
                     <span class="inline-block absolute md:text-white md:top-3 md:left-[19.2rem] md:px-4 lg:top-5 lg:left-[26.5rem] xl:top-6 xl:left-[34.5rem]">R</span>
                 </span>
@@ -75,14 +101,50 @@
     </section>
 
 </main>
-<!--
-<div class="relative size-">
-    <div class="relative inset-x-20 top-20 h-">
-        <img src="images/Group 33521.png" alt="">
-    </div>
-</div>
--->
 
+<section class="py-12 relative top-40 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">
+        Trusted By
+      </h2>
+
+      <div class="scrolling-wrapper">
+        <div id="logoScroller" class="scrolling-content">
+          <!-- Repeat logos twice for seamless scroll -->
+          <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+
+            <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+          </div>
+
+          <div class="flex gap-8">
+            <img src="images/paperz.jpg" alt="Paperz Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Dorfus.jpg" alt="Dorfus Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Martino.jpg" alt="Martino Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Square.jpg" alt="Square Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+            <img src="images/Gabona.jpg" alt="Gobona Logo" class="h-20 grayscale hover:grayscale-0 transition duration-300" />
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+  
+     
 
 <section class="bg-white p-10">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative inset-x-0 top-55">
@@ -103,8 +165,6 @@
                 Contact Us
             </button>
         </div>
-
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class=" rounded-lg p-4 relative top-30">
                 <img src="images/image.png" alt="UX Experience" class="rounded-md mb-3">
@@ -118,7 +178,7 @@
                 <p class="text-gray-600 text-sm">I design products that are more than pretty. I make them usable.</p>
             </div>
 
-            <div class=" rounded-lg p-4 relative top-30">
+            <div class=" rounded-lg p-4 relative top-20 md:top-30">
                 <img src="images/image (2).png" alt="Product Analysis" class="rounded-md mb-3">
                 <h3 class="text-lg font-semibold text-gray-900">Product Analysis</h3>
                 <p class="text-gray-600 text-sm">I design products that are more than pretty. I make them usable.</p>
@@ -132,35 +192,76 @@
         </div>
     </div>
 
+    
+      <section class="bg-white py-12 relative top-120 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      
+            <!-- 1 -->
+            <div>
+              <svg viewBox="0 0 100 40" class="w-full h-16 mx-auto">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ec4899; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#8b5cf6; stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                      font-size="40" font-weight="700"
+                      fill="transparent" stroke="url(#grad1)" stroke-width="2">
+                  12K+
+                </text>
+              </svg>
+              <p class="text-sm text-gray-700">Project Complete</p>
+            </div>
+      
+            <!-- 2 -->
+            <div>
+              <svg viewBox="0 0 100 40" class="w-full h-16 mx-auto">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                      font-size="40" font-weight="700"
+                      fill="transparent" stroke="url(#grad1)" stroke-width="2">
+                  7K+
+                </text>
+              </svg>
+              <p class="text-sm text-gray-700">Happy Client</p>
+            </div>
+      
+            <!-- 3 -->
+            <div>
+              <svg viewBox="0 0 100 40" class="w-full h-16 mx-auto">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                      font-size="40" font-weight="700"
+                      fill="transparent" stroke="url(#grad1)" stroke-width="2">
+                  10+
+                </text>
+              </svg>
+              <p class="text-sm text-gray-700">Years Experience</p>
+            </div>
+      
+            <!-- 4 -->
+            <div>
+              <svg viewBox="0 0 100 40" class="w-full h-16 mx-auto">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                      font-size="40" font-weight="700"
+                      fill="transparent" stroke="url(#grad1)" stroke-width="2">
+                  270+
+                </text>
+              </svg>
+              <p class="text-sm text-gray-700">Win Awards</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      
 
 
 
-
-<!--
-<section class="p-10 relative inset-x- top-65 h-">
-                <div class=" flex flex-wrap items-center justify-center gap-10 text-center relative inset-x- top-47 h-">
-                        <div>
-                               <h2 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 stroke-2 stroke-current">12K+</h2>
-                               <p class="text-sm text-gray-600">Project Complete</p>
-                        </div>
-                       <div>
-                               <h2 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">7K+</h2>
-                               <p class="text-sm text-gray-600">Happy Client</p>
-                       </div>
-                        <div>
-                               <h2 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">10+</h2>
-                               <p class="text-sm text-gray-600">Years Experience</p>
-                       </div>
-                        <div>
-                               <h2 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">270+</h2>
-                               <p class="text-sm text-gray-600">Win Awards</p>
-                       </div>
-                </div>
-        </section>
-    -->
-<section>
-    <div class="max-w-6xl mx-auto relative inset-x- top-140 h-">  
-                   <div class="mb-3 flex justify-between items-center px-10 md:px-26 py-10 lg:px-1 font-Jakarta">
+<section class="lg:px-26 md:px-10">
+    <div class="max-w-6xl mx-auto relative inset-x- top-90 h- md:top-140">  
+                   <div class="mb-3 flex flex-col justify-between px-1 md:flex-row px-2 py-10 lg:px-1 font-Jakarta">
                           <div class="">
                                    <p class="text-sm text-purple-600 font-semibold">PORTFOLIO</p>
                                    <h2 class="text-3xl font-bold">Some Of Our Best Works</h2>
@@ -177,7 +278,7 @@
                    </div>
         
 
-        <div class="grid grid-cols-4 gap-5">
+        <div class=" grid grid-cols-1 gap-5 md:grid-cols-4 ">
                   <div class="relative col-span-2">
                           <img src="images/Rectangle 38.png" class="w-full h-50 object-cover">
                                 <div class="absolute bottom-4 left-4 text-white">
@@ -185,28 +286,28 @@
                                      <h3 class="text-lg font-bold">Greenfy Website</h3>
                                </div>
                  </div>
-                                  <div class="col-span-1">
+                                  <div class="col-span-2 md:col-span-1">
                                           <img src="images/Rectangle 39.png" class=" w-full h-50 object-cover">
                                   </div>
-                                  <div class="col-span-1">
+                                  <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 43.png" class="w-full h-50 object-cover">
                                   </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-2 md:col-span-1">
                                           <img src="images/Rectangle 61.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 60.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-2">
+                                   <div class="col-span-2 hidden md:block">
                                           <img src="images/Rectangle 59.png" class="w-full h-50 object-cover">
                                   </div>
-                                   <div class="col-span-2">
+                                   <div class="col-span-2 hidden md:block">
                                           <img src="images/Rectangle 38.png" class="w-full h-50 object-cover">
                                    </div>
-                                    <div class="col-span-1">
+                                    <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 39.png" class="w-full h-50 object-cover">
                                    </div>
-                                   <div class="col-span-1">
+                                   <div class="col-span-1 hidden md:block">
                                           <img src="images/Rectangle 43.png" class="w-full h-50 object-cover">
                                    </div>
                 
@@ -216,148 +317,258 @@
     
 </section>
 
-<div class="bg-gray-800 relative inset-x- top-220 h- w-full">
-             <div class="max-w-6xl mx-auto py- px-5 relative inset-x- top-10 h-">
-                       <div class="flex justify-between items-center mb-8">
-                           <h2 class="text-2xl font-bold text-white">LATEST BLOG<br>Check Some of Latest <br> News & Articles</h2>
-                                 <button class="mt-6 bg-white text-black px-6 py-3 font-semibold relative group
-                                                before:absolute before:top-0 before:left-0 before:-z-10 
-                                                before:w-full before:h-full
-                                                before:bg-gradient-to-r before:from-[#3C33EF] before:to-[#F43366]
-                                                before:transition-all before:duration-300
-                                                hover:before:top-2 hover:before:left-2 font-Urbanist">Load More
-                                </button>
-                      </div>
-           <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                      <div class="relative p-4 rounded-lg">
-                              <img src="images/image (4).png" alt="Article Image" class="w-full h-100 object-cover">
-                                    <div class="absolute bg-gray-800 bottom-25 left-24">
-                                            <h3 class="text-lg text-white left-24">UI Design  |   22 May  2023</h3>
-                                            <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                            <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                            
-                                            
-                                            |/l<a href="#" class="text-pink-500 font-semibold mt-3 inline-block flex justify-center text-white">READ MORE →</a>
-                                   </div>
-                     </div>
-    
-              <div class="relative p-4 rounded-lg px-6">
-                              <img src="images/image (5).png" alt="Article Image" class="w-full h-100 object-cover rounded-md">
-                                    <div class="relative bg-gray-800 bottom-25 left-24">
-                                          <h3 class="text-lg text-white">UI Design  |   22 May 2023</h3>
-                                          <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                          <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                          <a href="#" class="text-pink-500 font-semibold mt-3 inline-block text-white">READ MORE →</a>
-                                  </div>
-         </div>
-              <div class="relative p-4 rounded-lg">
-                             <img src="images/image (4).png" alt="Article Image" class="w-full h-100 object-cover rounded-md">
-                                    <div class="absolute bg-gray-800 bottom-25 left-24">
-                                          <h3 class="text-lg text-white">UI Design  |   22 May 2023</h3>
-                                          <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                          <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                          <a href="#" class="text-pink-500 font-semibold mt-3 inline-block text-white">READ MORE →</a>
-                                  </div>
+
+<section class="bottom-80 bg-black bg-cover bg-center w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-full min-h-screen mt-200 pb-26 md:pb-20 bg-black-500 md:bottom-27">
+    <div class="max-w-6xl mx-auto py-36 px-0 md:px-12">
+      <div class="mb-3 flex flex-col justify-between px-1 md:flex-row px-2 py-10 lg:px-1 font-Jakarta">
+        <div>
+        <h2 class="text-pink-400 text-sm font-bold uppercase">Latest Blog</h2>
+        <h1 class="text-3xl md:text-4xl font-bold mt-2 text-white">Check Some of Latest<br> News & Articles</h1>
         </div>
-             <div class="relative p-4 rounded-lg">
-                            <img src="images/image (5).png" alt="Article Image" class="w-full h-100 object-cover rounded-md">
-                                   <div class="relative bg-gray-800 bottom-25 left-24">
-                                          <h3 class="text-lg text-white">UI Design  |   22 May 2023</h3>
-                                          <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                          <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                          <a href="#" class="text-pink-500 font-semibold mt-3 inline-block text-white">READ MORE →</a>
-                                  </div>
-            </div>
-             <div class="relative p-4 rounded-lg">
-                           <img src="images/image (4).png" alt="Article Image" class="w-full h-100 object-cover rounded-md">
-                                  <div class="absolute bg-gray-800 bottom-25 left-24">
-                                         <h3 class="text-lg text-white">UI Design  |   22 May 2023</h3>
-                                         <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                         <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                        <a href="#" class="text-pink-500 font-semibold mt-3 inline-block text-white">READ MORE →</a>
-                                 </div>
-         </div>
-             <div class="relative p-4 rounded-lg">
-                           <img src="images/image (5).png" alt="Article Image" class="w-full h-100 object-cover rounded-md">
-                                  <div class="relative bg-gray-800 bottom-25 left-24">
-                                         <h3 class="text-black text-white">UI Design  |   22 May 2023</h3>
-                                         <h3 class="mt-4 text-4xl font-semibold text-white">What is UI Design in Front End Design?</h3>
-                                         <p class="text-sm text-gray-400 mt-2 text-gray-400">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
-                                        <a href="#" class="text-pink-500 font-semibold mt-3 inline-block text-white">READ MORE →</a>
-                                </div>
-           </div>
-    </div>
-</div>
-
-</div>
-
-<!--
-<section class="flex items-center justify-center  bg-gray-100 relative top-230">
-    <div class="w-full max-w-4xl relative">
-        <h2 class="text-center text-purple-600 text-sm font-semibold">TESTIMONIALS</h2>
-        <h3 class="text-center text-2xl font-bold mb-6">What our customer say</h3>
-        <div class="flex transition-transform duration-500 ease-in-out" id="slider">
-            <div class="w-full flex-shrink-0 p-4">
-                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
-                    <p class="text-gray-600">“Now, I can track my business activity with ease and have a great understanding to operate the products.”</p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <img src="https://i.pravatar.cc/40?img=1" class="w-8 h-8 rounded-full mr-2" alt="User">
-                        <span class="font-semibold">Janne Cooper</span>
-                    </div>
-                    <div class="mt-2 text-yellow-500">⭐ 4.3</div>
+        <div class="mb-10 flex justify-start mt-10">
+            <button class="relative px-6 py-3 text-b text-xl font-bold bg-white
+            before:absolute before:top-0 before:left-0 before:-z-10 
+            before:w-full before:h-full
+            before:bg-gradient-to-r before:from-[#3C33EF] before:to-[#F43366]
+            before:transition-all before:duration-300
+            hover:before:top-2 hover:before:left-2">Load More</button>
+        </div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-30 mb-30">
+            <div class="relative bg-black top-">
+                <img src="images/image (4).png" alt="Blog Image" class="w-full ">
+                <div class="absolute left-12 top-32 xl:top-35 bg-black">
+                <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
                 </div>
             </div>
-            <div class="w-full flex-shrink-0 p-4">
-                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
-                    <p class="text-gray-600">“Great experience! The product is easy to use and helps me manage my business better.”</p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <img src="https://i.pravatar.cc/40?img=2" class="w-8 h-8 rounded-full mr-2" alt="User">
-                        <span class="font-semibold">Cobo Cannereu</span>
-                    </div>
-                    <div class="mt-2 text-yellow-500">⭐ 4.5</div>
+            
+            <div class="relative bg-black">
+                <img src="images/image (5).png" alt="Blog Image" class="w-full">
+                <div class="absolute left-12 top-32 xl:top-35 bg-black">
+                <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
                 </div>
             </div>
-            <div class="w-full flex-shrink-0 p-4">
-                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
-                    <p class="text-gray-600">“Highly recommend! It simplifies everything and provides great insights.”</p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <img src="https://i.pravatar.cc/40?img=3" class="w-8 h-8 rounded-full mr-2" alt="User">
-                        <span class="font-semibold">Ary Gunawan</span>
-                    </div>
-                    <div class="mt-2 text-yellow-500">⭐ 3.5</div>
+            
+            <div class="relative bg-black ">
+                <img src="images/image (4).png" alt="Blog Image" class="w-full">
+                <div class="absolute left-12 top-32 xl:top-35 bg-black">
+                <p class="text-gray-400 text-sm mt-4 text-7xl">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 text-9xl lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
+                </div>
+            </div>
+            
+            <div class="relative bg-black ">
+                <img src="images/image (5).png" alt="Blog Image" class="w-full">
+                <div class="absolute left-12 top-40 xl:top-35 p-2 bg-black">
+                <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
+                </div>
+            </div>
+
+            <div class="relative ">
+                <img src="images/image (4).png" alt="Blog Image" class="w-full">
+                <div class="absolute left-12 top-32 xl:top-35 bg-black">
+                <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
+                </div>
+            </div>
+
+            <div class="relative hidden md:block">
+                <img src="images/image (5).png" alt="Blog Image" class="w-full">
+                <div class="absolute left-12 top-32 xl:top-35 p-2 bg-black">
+                <p class="text-gray-400 text-sm mt-4">UI Design | 22 May 2023</p>
+                <h3 class="text-xl font-semibold mt-2 lg:text-2xl xl:text-3xl text-white">What is UI Design in Front End Design?</h3>
+                <p class="text-gray-400 mt-2">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born...</p>
+                <a href="#" class="text-white font-bold mt-4 inline-block">READ MORE →</a>
                 </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
 
-<script>
-    let index = 0;
-    const slider = document.getElementById("slider");
+
+
+
+<section class="bg-white -mt-46 md:mt-10">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-26">
+            <h3 class="text-pink-500">TESTIMONIALS</h3>
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">What Our Customers Say</h2>
+      </div>
+      
+       <div class="scrolling-wrapper">
+      <div id="logoScroller" class="grid grid-cols-1 md:grid-cols-3 gap-8  scrolling-content">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-4 ">
+          <blockquote class="text-gray-700 italic mb-4">
+            "Now, I can track my business activity with easier and have a great understandable to operate the products."
+          </blockquote>
+          <div class="flex items-center">
+            <img 
+              class="w-10 h-10 rounded-full mr-3 object-cover" 
+              src="images/Ellipse 1 (2).png" 
+              alt="User photo"
+            />
+            <div class="flex space-x-36">
+              <p class="font-semibold text-gray-800">Berry Gunawan</p>
+              <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded ">
+          <blockquote class="text-gray-700 italic mb-4">
+            "Now, I can track my business activity with easier and have a great understandable to operate the products"
+          </blockquote>
+          <div class="flex items-center">
+            <img 
+              class="w-10 h-10 rounded-full mr-3 object-cover" 
+              src="images/Ellipse 1.png" 
+              alt="User photo"
+            />
+            <div class="flex space-x-36">
+              <p class="font-semibold text-gray-800">Janne Cooper</p>
+              <div><p class="text-yellow-500 text-lg">★4.5</p></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded">
+          <blockquote class="text-gray-700 italic mb-4">
+            "Now, I can track my business activity with easier and have a great understandable to operate the products"
+          </blockquote>
+          <div class="flex items-center justify-between">
+            
+            <img 
+              class="w-10 h-10 rounded-full mr-3 object-cover" 
+              src="images/Ellipse 1 (1).png" 
+              alt="User photo"
+            />
+            
+            <div class="flex space-x-36">
+              <p class="font-semibold text-gray-800">Cobocannaeru</p>
+              <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white p-6 rounded ">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center">
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1 (2).png" 
+                alt="User photo"
+              />
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Berry Gunawan</p>
+                <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded ">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center">
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1.png" 
+                alt="User photo"
+              />
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Janne Cooper</p>
+                <div><p class="text-yellow-500 text-lg">★4.5</p></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Now, I can track my business activity with easier and have a great understandable to operate the products"
+            </blockquote>
+            <div class="flex items-center justify-between">
+              
+              <img 
+                class="w-10 h-10 rounded-full mr-3 object-cover" 
+                src="images/Ellipse 1 (1).png" 
+                alt="User photo"
+              />
+              
+              <div class="flex space-x-36">
+                <p class="font-semibold text-gray-800">Cobocannaeru</p>
+                <div><p class="text-yellow-500 text-lg">★3.5</p></div>
+              </div>
+            </div>
+      </div>
+      </div>
+    </div>
     
-    function slideTestimonials() {
-        index = (index + 1) % 3; 
-        slider.style.transform = `translateX(-${index * 50}%)`;
-    }
-    setInterval(slideTestimonials, 1000); 
-</script>
--->
+  </section>
+  
 
-<section class="bg-black text-white relative top-300 w-screen">
+
+
+<section class="bg-black w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] text-white relative top-10">
     <div class="max-w-5xl mx-auto py-25 px-26 flex flex-col md:flex-row gap-25">
         <div class="md:w-1/2 order-2 md:order-1">
             <div class="space-y-4">
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">How can we help your business?</button>
+                  
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">How can we help your business?</option>
+                      <option value="">Promotion</option>
+                      <option value="">Advertisement</option>
+                      <option value="">Business Advice</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">What are the advantages of Bisnext</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">What are the advantages of Bisnext</option>
+                      <option value="">Zero Investment Entry</option>
+                      <option value="">Comprehensive Service Portfolio</option>
+                      <option value="">High Earning Potential</option>
+                      <option value="">User-Friendly Platform</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4">
-                    <button class="w-full text-left font-medium">Let’s find an office near you?</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                        <option value="">Let’s find an office near you?</option>
+                        <option value="">Abuakwa - Kumasi</option>
+                        <option value="">Tafo - Kumasi</option>
+                        <option value="">Achimota - Accra</option>
+                        <option value="">Goaso - Ahafo</option>
+                    </select>
                 </div>
                 <div class="bg-gray-800 p-4 ">
-                    <button class="w-full text-left font-medium">How IT consultancy experts work?</button>
+                    <select class="w-full text-left font-medium bg-gray-800">
+                      <option value="">How IT consultancy experts work?</option>
+                      <option value="">Understanding the Client's Needs</option>
+                      <option value="">Analyzing and Diagnosing Problems</option>
+                      <option value=""> Creating a Strategy or Solution</option>
+                      <option value=""> Implementation Support</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -369,43 +580,62 @@
     </div>
 </section>
 
+<footer class="bg-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto flex flex-col items-center space-y-6 text-center md:space-y-10">
 
-<section class=" flex items-center justify-center ">
-    <div class="text-center w-full">
-        <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 stroke-2 stroke-current text-sm uppercase text-pink-500 tracking-wide font-semibold">Have you project in mind?</h3>
-        <p class="text-4xl font-bold text-gray-900 mt-2">Let’s Make Something <br> Great Together!</p>
+    <!-- Heading -->
+    <h4 class="text-sm text-pink-500 tracking-wide uppercase">
+      Have you project in mind?
+    </h4>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center">
+      Let’s Make Something <br> Great Together!
+    </h1>
 
-        <div class="mt-6 relative top-10">
-            <a href="#" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium text-lg px-10 py-26 rounded-full shadow-lg transition-transform transform hover:scale-105">
-                Contact With Us →
-            </a>
-        </div>
+    <!-- Contact Button -->
+    <a href="#" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold px-14 py-14 pb-26 pt-26 rounded-full shadow-lg transition-transform transform hover:scale-105">
+      Contact With Us
+    </a>
 
-        <div class="mt-6">
-            <p class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 stroke-2 stroke-current font-bold text-lg tracking-wider relative top-17">XEST <br> FOLIO</p>
-        </div>
+    <!-- Logo -->
+    <img src="images/Xest Folio.png" alt="Xest Folio" class="h-10">
 
-        <div class="mt-6 flex justify-center  text-gray-700 text-2xl top-17 border-b  border-gray-400 pb-15 sm:px-10">
-            <a href="#" class="hover:text-pink-500"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-pink-500"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-pink-500"><i class="fab fa-behance"></i></a>
-            <a href="#" class="hover:text-pink-500"><i class="fab fa-dribbble"></i></a>
-        </div>
-
-        <div class="mt-8 text-gray-500 text-sm  top-20 flex justify-between  ">
-            <div>
-                <p>© 2023 Ideapeel Inc. All Rights Reserved</p>
-                </div>
-            <div">
-                <a href="#" class="hover:underline">Privacy Policy <span>|</span>  <a href="" class="hover:underline">Terms and Conditions</a></a>
-            </div>
-        </div>
+  
+    <div class="flex justify-center items-center gap-6 text-2xl">
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-behance"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fab fa-dribbble"></i></a>
     </div>
 
-    <!-- FontAwesome for icons -->
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
-</section>
+    <div class="border-b border-gray-300 w-full"></div>
+
+    <div class="flex flex-col items-center space-y-2 text-gray-500 text-sm md:flex-row md:justify-between md:space-y-0 w-full">
+      <p>© 2023 Ideapeel Inc. All Rights Reserved</p>
+      <div class="flex items-center gap-2">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Terms and Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+
+</script>
+
 
 </body>
 </html>
